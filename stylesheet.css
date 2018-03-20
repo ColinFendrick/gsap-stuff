@@ -1,0 +1,14 @@
+.img-responsive {
+  height: 100px;
+}
+
+.question {
+  padding: 20px;
+  background-color: #eee;
+  margin: 20px 10px 2000px 10px;
+  opacity: 0.4;
+}
+
+.image-radio {
+  width: 200px;
+}
