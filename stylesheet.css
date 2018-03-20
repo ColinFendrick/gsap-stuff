@@ -1,11 +1,25 @@
+body {
+  background: #f8f8f8;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+}
+
 .img-responsive {
   height: 100px;
 }
 
 .scroll {
   padding: 20px;
-  background-color: #eee;
   margin: 100px 10px 200px 10px;
+  opacity: 0;
+}
+
+#main-title {
+  opacity: 0;
+  bottom: -2000px;
+}
+
+#subtitle {
   opacity: 0;
 }
 

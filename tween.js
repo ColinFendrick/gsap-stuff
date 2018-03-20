@@ -1,6 +1,20 @@
 window.onload = function() {
-  TweenLite.to("#top", 1, { 
-    opacity: 1
+  TweenLite.to("#main-title", 1.5, { 
+    opacity: 1,
+    top: 0,
+    onComplete: function () {
+      TweenLite.to("#subtitle", 1.5, {
+        opacity: 1
+      })
+    }
+  })
+
+  TweenLite.to("#0", 3, {
+    opacity: 1,
+  })
+
+  TweenLite.to($('html, body'), 1, {
+    scrollTop: 0
   })
 }
 
@@ -14,6 +28,7 @@ $(document).ready(function() {
         location.hostname == this.hostname
       ) {
         var target = $(this.hash);
+        console.log
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
         if (target.length) {
@@ -36,7 +51,10 @@ $(document).ready(function() {
             opacity: 1
           })
 
-          
+          // const prevPos = $(this.hash)[0].id - 1;
+          // TweenLite.to(`#${prevPos}`, 2, {
+          //   opacity: 0.4
+          // })
         }
       }
     })
