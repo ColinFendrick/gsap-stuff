@@ -1,16 +1,21 @@
-window.onload = function() {
+window.onload = function () {
   TweenLite.to("#main-title", 1.5, { 
     opacity: 1,
     top: 0,
     onComplete: function () {
       TweenLite.to("#subtitle", 1.5, {
-        opacity: 1
+        opacity: 1,
+        onComplete: function () {
+          TweenLite.to("#begin-btn", 1, {
+            opacity: 1
+          })
+        }
       })
     }
   })
 
-  TweenLite.to("#0", 3, {
-    opacity: 1,
+  TweenLite.to("#zero", 3, {
+    opacity: 1
   })
 
   TweenLite.to($('html, body'), 1, {

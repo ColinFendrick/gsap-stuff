@@ -23,6 +23,10 @@ body {
   opacity: 0;
 }
 
+#begin-btn {
+  opacity: 0;
+}
+
 .image-radio {
   width: 200px;
 }
