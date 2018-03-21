@@ -1,28 +1,14 @@
-window.onload = function () {
-  TweenLite.to("#main-title", 1.5, { 
-    opacity: 1,
-    top: 0,
-    onComplete: function () {
-      TweenLite.to("#subtitle", 1.5, {
-        opacity: 1,
-        onComplete: function () {
-          TweenLite.to("#begin-btn", 1, {
-            opacity: 1
-          })
-        }
-      })
-    }
-  })
+const timeline_load = new TimelineLite();
 
-  TweenLite.to("#zero", 3, {
-    opacity: 1
-  })
+timeline_load.to("html, body", 1, { scrollTop: 0 })
+  .to("#main-title, .heading", 1.5, { opacity: 1 })
+  .to("#subtitle", 1.5, { opacity: 1 })
+  .to("#begin-btn", 1, { opacity: 1 })
 
-  TweenLite.to($('html, body'), 1, {
-    scrollTop: 0
-  })
-}
+window.onload = timeline_load.play()
 
+
+// Clicking one answer will scroll to the next question
 $(document).ready(function() {
   $('a[href*="#"]')
     .not('[href="#"]')

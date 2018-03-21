@@ -8,10 +8,17 @@ body {
   height: 100px;
 }
 
-.scroll {
+.heading, 
+.question {
   padding: 20px;
-  margin: 100px 10px 200px 10px;
+  margin: 200px 10px 200px 10px;
   opacity: 0;
+  background-color: aliceblue;
+  box-shadow: 2px 0 2px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 #main-title {
