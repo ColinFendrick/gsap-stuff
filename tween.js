@@ -1,18 +1,16 @@
-const tl_title = new TimelineLite();
+$(document).ready(function() {
+  const tl_title = new TimelineLite();
+  const tl_pq = new TimelineLite();
+  const tl_mq = new TimelineLite();
 
-// When the page loads, fade in the intro stuff
-window.onload = function() {
+  //Stuff on initial loading
   $('.heading').css({ "display": "flex" });
   tl_title.to("html, body", 0.75, { scrollTop: 0 })
     .to("#main-title, .heading", 1.5, { opacity: 1 })
     .to("#subtitle", 1.25, { opacity: 1 })
-    .to("#begin-btn", 1, { opacity: 1 })
-}
+    .to("#begin-btn", 1, { opacity: 1 });
 
-const tl_personalForms = new TimelineLite();
-
-// Clicking one answer will scroll to the next question
-$(document).ready(function() {
+  // Handling the clicks and rendering to next item
   $('a[href*="#"]')
   .not('[href="#"]')
   .not('[href="#0"]')
@@ -25,20 +23,22 @@ $(document).ready(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
       if (target.length) {
-
         event.preventDefault();
         $(target).css({ "display": "flex" })
 
-        if (target[0] === $('.forms')[0]) {
-          tl_personalForms.to(".forms, .form-title", 1.5, { opacity: 1 })
-            .to(".personalForms", 1.5, { opacity: 1 })
+        if (target[0].id === 'pq') {
+          tl_pq.to("#pq, #pq-title", 1.5, { opacity: 1 })
+            .to("#pq-forms", 1.5, { opacity: 1 });
+        } else if (target[0].id === 'mq') {
+          tl_mq.to("#mq, #mq-title", 1.5, { opacity: 1 })
+            .to("#mq-forms", 1.5, { opacity: 1 })
         } else {
           TweenLite.to($(target), 2, { opacity: 1 })
         }
 
         // Scrolls to the element & focuses it
         TweenLite.to($('html, body'), 1.5, {
-          scrollTop: target.offset().top,
+          scrollTop: target.offset().top - 200,
           onComplete: function() {
             console
             $(target).focus();
@@ -52,5 +52,5 @@ $(document).ready(function() {
         })
       }
     }
-  })
-})
+  });
+});

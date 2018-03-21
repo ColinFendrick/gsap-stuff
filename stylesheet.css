@@ -17,7 +17,7 @@ body {
 .question {
   display: none;
   padding: 20px;
-  margin: 20px;
+  margin: 200px 20px;
   background-color: #f8f8f8;
   box-shadow: 2px 2px 2px #ddd;
   flex-direction: column;
@@ -41,20 +41,23 @@ body {
   opacity: 0;
 }
 
-.personalForms {
+.form-group {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
   margin: 20px;
-  opacity: 0;
 }
 
 .forms-row {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   margin: 10px;
+  flex-wrap: wrap;
+}
+
+.forms-row > div {
+  flex: 0.3;
 }
 
 .question {
@@ -65,6 +68,11 @@ body {
   height: 50px
 }
 
+#pq-forms,
+#mq-forms {
+  opacity: 0;
+}
+
 label.btn > input {
   visibility: hidden;
   position: absolute;
@@ -72,8 +80,8 @@ label.btn > input {
 
 
 /* Dev */
-#two {
+/* #mq, #pq {
   display: flex;
   opacity: 1;
-}
+} */
 
