@@ -4,10 +4,8 @@ body {
   color: #222;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-
-
+  height: 4000px;
 }
 
 .img-responsive {
@@ -18,13 +16,16 @@ body {
 .question {
   padding: 20px;
   margin: 20px;
-  opacity: 0;
   background-color: #f8f8f8;
   box-shadow: 2px 0 2px #ddd;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+
+.heading { 
+  opacity: 0;
 }
 
 #main-title {
@@ -34,9 +35,15 @@ body {
 
 #subtitle {
   opacity: 0;
+  text-align: center;
 }
 
 #begin-btn {
+  opacity: 0;
+}
+
+.question { 
+  display: none;
   opacity: 0;
 }
 
