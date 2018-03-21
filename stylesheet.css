@@ -15,6 +15,7 @@ body {
 .heading,
 .forms,
 .question {
+  display: none;
   padding: 20px;
   margin: 20px;
   background-color: #f8f8f8;
@@ -22,7 +23,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  display: none;
   opacity: 0;
 }
 
@@ -33,12 +33,21 @@ body {
   text-align: center;
 }
 
+.form-title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: center;
+  opacity: 0;
+}
+
 .personalForms {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
   margin: 20px;
+  opacity: 0;
 }
 
 .forms-row {
@@ -46,11 +55,6 @@ body {
   flex-direction: row;
   justify-content: space-between;
   margin: 10px;
-}
-
-.form-title {
-  margin-bottom: 20px;
-  text-align: center;
 }
 
 .image-radio {
