@@ -27,18 +27,58 @@
     </div>
   </div>
 
-  <div class="container-fluid question" id="one">
+  <div class="container forms" id="one">
+    <div class="form-title" id="personalForms-title">
+      <h4>Tell us a little about yourself</h4>
+      <small class="form-text text-muted">We'll never share this information with anyone.</small>
+    </div>
+    
+    <form class="personalForms">
+      <div class="forms-row">
+        <div>
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="John"> 
+        </div>
+        <div>
+          <label for="middleName">Middle Name</label>
+          <input type="text" class="form-control" id="middleName" placeholder="John">
+        </div>
+        <div>
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="last" placeholder="John">
+        </div>
+      </div>
+
+      <div class="forms-row">
+        <div>
+          <label for="phoneNumber">Phone:</label>
+          <input type="number" class="form-control" id="phoneNumber" placeholder="John">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="John">
+        </div>
+        <div>
+          <label for="zipCode">Zip</label>
+          <input type="number" class="form-control" id="zipCode" placeholder="John">
+        </div>
+      </div>
+      
+    </form>
+  </div>
+
+  <div class="container question" id="two">
     <div>
         Do you have an employer group health plan that pays after Medicare that is ending?
     </div>
     <div class="btn-group-toggle btn-group-lg" data-toggle="buttons">
-      <a href="#two" class="button-wrapper">
+      <a href="#three" class="button-wrapper">
         <label class="btn btn-success">
           <input type="radio" name="options" id="option1" autocomplete="off"> 
           <img src="https://openclipart.org/download/257462/Checkmark.svg" class="image-radio" />
         </label>
       </a>
-      <a href="#two" class="button-wrapper">
+      <a href="#three" class="button-wrapper">
         <label class="btn btn-danger">
           <input type="radio" name="options" id="option2" autocomplete="off">
           <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Red_X.svg" class="image-radio" />
@@ -47,18 +87,18 @@
     </div>
   </div>
 
-  <div class="container-fluid question" id="two">
+  <div class="container-fluid question" id="three">
     <div>
         Do you have a Medicare Select policy and have moved out of the Medicare Select plans service area?
     </div>
     <div class="btn-group-toggle btn-group-lg" data-toggle="buttons">
-      <a href="#three">
+      <a href="#four">
         <label class="btn btn-success">
           <input type="radio" name="options" id="option1" autocomplete="off">
           <img src="https://openclipart.org/download/257462/Checkmark.svg" class="image-radio" />
         </label>
       </a>
-      <a href="#three">
+      <a href="#four">
         <label class="btn btn-danger">
           <input type="radio" name="options" id="option2" autocomplete="off">
           <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Red_X.svg" class="image-radio" />
@@ -67,18 +107,18 @@
     </div>
   </div>
 
-<div class="container-fluid question" id="three">
+<div class="container-fluid question" id="four">
   <div>
     Has your Medigap insurance company gone bankrupt and you lost coverage, or has the company substantially violated a material provision of the policy or materially misrepresented a policy provision, or has your Medigap policy ended through no fault of your own?
   </div>
   <div class="btn-group-toggle btn-group-lg" data-toggle="buttons">
-    <a href="#four">
+    <a href="#five">
       <label class="btn btn-success">
         <input type="radio" name="options" id="option1" autocomplete="off">
         <img src="https://openclipart.org/download/257462/Checkmark.svg" class="image-radio" />
       </label>
     </a>
-    <a href="#four">
+    <a href="#five">
       <label class="btn btn-danger">
         <input type="radio" name="options" id="option2" autocomplete="off">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Red_X.svg" class="image-radio" />
@@ -87,7 +127,7 @@
   </div>
 </div>
 
-<div class="container-fluid question" id="four">
+<div class="container question" id="five">
   <div>
     Are you currently enrolled in a Medicare Advantage program?
   </div>

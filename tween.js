@@ -5,8 +5,15 @@ tl_title.to("html, body", 1, { scrollTop: 0 })
 .to("#subtitle", 1, { opacity: 1 })
 .to("#begin-btn", 1, { opacity: 1 })
 
-window.onload = tl_title.play()
+window.onload = () => {
+  tl_title.play();
+  $('.heading').css({ "display": "flex" })
+}
 
+const tl_personalForms = new TimelineLite();
+
+tl_personalForms.to("#personalForms-title", 1, { opacity: 1})
+.to(".personalForms", 1.5, {opacity: 1})
 
 // Clicking one answer will scroll to the next question
 $(document).ready(function() {
