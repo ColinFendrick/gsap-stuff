@@ -1,7 +1,13 @@
 body {
-  background: #f8f8f8;
+  background: aliceblue;
   font-family: Arial, Helvetica, sans-serif;
   color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+
 }
 
 .img-responsive {
@@ -11,10 +17,10 @@ body {
 .heading, 
 .question {
   padding: 20px;
-  margin: 200px 10px 200px 10px;
+  margin: 20px;
   opacity: 0;
-  background-color: aliceblue;
-  box-shadow: 2px 0 2px black;
+  background-color: #f8f8f8;
+  box-shadow: 2px 0 2px #ddd;
   display: flex;
   flex-direction: column;
   align-items: center;

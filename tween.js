@@ -2,7 +2,7 @@ const timeline_load = new TimelineLite();
 
 timeline_load.to("html, body", 1, { scrollTop: 0 })
   .to("#main-title, .heading", 1.5, { opacity: 1 })
-  .to("#subtitle", 1.5, { opacity: 1 })
+  .to("#subtitle", 1, { opacity: 1 })
   .to("#begin-btn", 1, { opacity: 1 })
 
 window.onload = timeline_load.play()
