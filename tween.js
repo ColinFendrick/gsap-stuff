@@ -12,7 +12,7 @@ $(document).ready(function() {
     .to("#subtitle", 1.25, { opacity: 1 })
     .to("#begin-btn", 1, { opacity: 1 });
 
-  // Handling the clicks and rendering to next item
+  // Handling the clicks and moving to next item
   $('a[href*="#"]')
   .not('[href="#"]')
   .not('[href="#0"]')
@@ -33,10 +33,10 @@ $(document).ready(function() {
         if (id === 'pq' || id === 'mq') {
           timelines[id].to(`#${id}, #${id}-title`, 1.5, { opacity: 1 })
           .to(`#${id}-forms`, 1.5, { opacity: 1 })
-          console.log(timelines[id])
         } else {
           TweenLite.to((target), 2, { opacity: 1 });
         }
+        console.log(target, $(target))
 
         // Scrolls to the element & focuses it
         TweenLite.to($('html, body'), 1.5, {
@@ -44,11 +44,11 @@ $(document).ready(function() {
           onComplete: function() {
             console
             $(target).focus();
-            if ($(target).is(":focus")) {
+            if (target.is(":focus")) {
               return false;
             } else {
-              $(target).attr('tabindex', '-1');
-              $(target).focus();
+              target.attr('tabindex', '-1');
+              target.focus();
             }
           }
         })
