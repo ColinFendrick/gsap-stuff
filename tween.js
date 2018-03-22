@@ -1,12 +1,14 @@
 $(document).ready(function() {
-  const tl_title = new TimelineLite();
-  const tl_pq = new TimelineLite();
-  const tl_mq = new TimelineLite();
+  const timelines = {
+    title: new TimelineLite(),
+    pq: new TimelineLite(),
+    mq: new TimelineLite
+  }
 
   //Stuff on initial loading
-  $('.heading').css({ "display": "flex" });
-  tl_title.to("html, body", 0.75, { scrollTop: 0 })
-    .to("#main-title, .heading", 1.5, { opacity: 1 })
+  $('.intro').css({ "display": "flex" });
+  timelines.title.to("html, body", 0.75, { scrollTop: 200 })
+    .to("#main-title, .intro", 1.5, { opacity: 1 })
     .to("#subtitle", 1.25, { opacity: 1 })
     .to("#begin-btn", 1, { opacity: 1 });
 
@@ -25,15 +27,15 @@ $(document).ready(function() {
       if (target.length) {
         event.preventDefault();
         $(target).css({ "display": "flex" })
-
-        if (target[0].id === 'pq') {
-          tl_pq.to("#pq, #pq-title", 1.5, { opacity: 1 })
-            .to("#pq-forms", 1.5, { opacity: 1 });
-        } else if (target[0].id === 'mq') {
-          tl_mq.to("#mq, #mq-title", 1.5, { opacity: 1 })
-            .to("#mq-forms", 1.5, { opacity: 1 })
+        
+        // Animating the fade-ins for each element
+        const id = target[0].id
+        if (id === 'pq' || id === 'mq') {
+          timelines[id].to(`#${id}, #${id}-title`, 1.5, { opacity: 1 })
+          .to(`#${id}-forms`, 1.5, { opacity: 1 })
+          console.log(timelines[id])
         } else {
-          TweenLite.to($(target), 2, { opacity: 1 })
+          TweenLite.to((target), 2, { opacity: 1 });
         }
 
         // Scrolls to the element & focuses it
